@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main__page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/img/pict/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.man {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(/img/pict/man.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 75% bottom;
+}
+
+.title {
+    position: absolute;		
+	font-family: 'MyriadPro-Regular', sans-serif;
+    font-style: italic;
+	text-transform: uppercase;
+	font-size: 130px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px #fff;
+    transform: rotate(-12deg);	
+	z-index: 2;
+    margin: 22% 0 0 33% ;
+}
+
+.sub__title {	
+	position: absolute;	
+    text-align: center;
+	transform: rotate(-12deg);
+	z-index: 2;
+    margin: 27% 0 0 45%;       
+}
+
+
+.sub__title .title__word {	
+    font-size: 55px;
+    font-weight: bold;
+    font-style: italic;
+    color: #ff00da;
+	font-family: 'Sedgwick Ave Display';
+    text-transform: uppercase;
+    /* text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF; */
+}
+
+.sub__title .title__word span {
+    animation: neon-4 linear infinite 2s;
+}
+
+.menu {
+    font-family: 'Open Sans';
+	position: absolute;
+    margin-top: 50px;
+	margin-left: 1100px;
+	z-index: 5;
+}
+  
+.menu__list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+  
+.menu__list__item {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 13px;
+}
+  
+.menu__list__item:nth-child(n + 2) {
+    margin-left: 36px;
+}
+ 
+.menu__link {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+}
+  
+.menu__link:hover {    
+	border: 1px solid #ff00da;
+	border-radius: 50px;
+	background-color: #ff00da;
+    color: #ffffff;
+	padding: 10px;
+}
+  
+.menu__button {
+    width: 23px;
+    height: 19px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+  
+.menu__button:before, .menu__button:after {
+    content: "";
+    width: 100%;
+    height: 15%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+  
+.menu__button:before {
+    top: 0;
+}
+  
+.menu__button:after {
+    bottom: 0;
+}
+  
+.menu__button__label {
+    width: 23px;
+    height: 15%;
+    margin-top: -1.5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.selected {
+    border: 1px solid #ff00da;
+	border-radius: 50px;
+	background-color: #ff00da;
+    color: #ffffff;
+	padding: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+#info__idea {
+    width: 370px;    
+    font-size: 72px;
+    font-family: 'Oswald';
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;    
+    text-transform: uppercase;
+    white-space: normal;
+    margin: 160px 0 0 60px;
+}
+
+h1 {
+    color:green;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+.description {
+    width: 370px;
+    font-family: 'Open Sans';
+    font-style: italic;
+    color: #fff;
+    font-size: 21px;
+    text-align: left;
+    margin: 26px 0 15px 60px;
+}
+
+.open__feedback {
+    width: 236px;
+    height: 43px;    
+    border: none;
+    background-color: #9c52a9;
+    border: 1px solid #9c52a9;
+	border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;    
+    text-transform: uppercase;
+    margin: 0 0 0 120px;
+}
+
+.open__feedback:hover {
+    background-color: #ff00da;
+    cursor: pointer;
+}
+
+@keyframes neon-4 {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    79%{
+        color: #5500a6;
+    }
+
+    80% {
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    82% {
+        color: #5500a6;
+        text-shadow: none;
+    }
+
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    92% {
+        color: #5500a6;
+        text-shadow: none;
+    }
+
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu__button {
+      display: none;
+    }
+}
