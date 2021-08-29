@@ -245,9 +245,3 @@ h1 {
         text-shadow: inherit;
     }
 }
-
-@media (min-width: 769px) {
-    .menu__button {
-      display: none;
-    }
-}
