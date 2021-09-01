@@ -69,7 +69,7 @@ body, html {
     font-family: 'Open Sans';
 	position: absolute;
     margin-top: 50px;
-	margin-left: 1100px;
+	margin-left: 1150px;
 	z-index: 5;
 }
   
@@ -189,7 +189,7 @@ h1 {
     margin: 26px 0 15px 60px;
 }
 
-.open__feedback {
+#open__feedback {
     width: 236px;
     height: 43px;    
     border: none;
@@ -203,9 +203,288 @@ h1 {
     margin: 0 0 0 120px;
 }
 
-.open__feedback:hover {
+#open__feedback:hover {
     background: linear-gradient(90deg, #6c3293,#ff00da);
     cursor: pointer;
+}
+
+.popup {
+    visibility: hidden;
+    font-family: 'Open Sans';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    display: flex;
+}
+  
+.popup__container {
+    max-width: 390px;
+    margin: auto;
+    background-color: #ffffff;
+    position: relative;
+    padding: 53px 29px;
+}
+
+.sign__up__title {
+    position: relative;
+    text-align: center;
+    color: #0f0d0e;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 40px;  
+}
+
+.sign__up__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.sign__up__column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sign__up__label {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    display: block;
+}
+  
+.sign__up__field {
+    border: 1px solid #4f0783;
+    box-sizing: border-box;
+    padding: 10px 20px 10px 40px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    transition: box-shadow 0.3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    background-size: 16px;
+    background-color: #f4f7f6;
+}
+  
+.sign__up__field::-webkit-input-placeholder {
+    color: #767676;
+}
+  
+.sign__up__field::-moz-placeholder {
+    color: #767676;
+    opacity: 1;
+}
+  
+.sign__up__field:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #4f0783 inset;
+}
+  
+.sign__up__field__username {
+    background-image: url(../img/svg/user.svg);
+}
+  
+.sign__up__field__email {
+    background-image: url(../img/svg/envelope.svg);
+}
+
+.sign__up__field__phone {
+    background-image: url(../img/svg/telephone-symbol-button.svg);
+}
+  
+.form__group {
+    width: 100%;
+}
+  
+.form__group:nth-child(n + 2) {
+    margin-top: 15px;
+}
+
+.field__label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+  
+.field__textarea {
+    width: 100%;
+    min-height: 130px;
+    font-family: inherit;
+    font-size: 13px;
+    padding: 21px 19px;
+    border: 1px solid #4f0783;
+    background-color: #f4f7f6;
+}
+
+.field__textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #4f0783 inset;
+}
+  
+.form__actions {
+    width: 100%;
+}
+  
+.button__send {
+    margin-top: 26px;
+}
+
+.button__send {
+    width: 100%;
+    height: 48px;
+    margin-top: 17px;
+    border: none;
+    background-color: #4f0783;
+    font-family: inherit;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button__send:hover {
+    background-color: #ff00da;
+    cursor: pointer;
+}
+
+.popup__close {
+    width: 15px;
+    height: 15px;
+    top: -600px;
+    left: 340px;
+    position: relative;
+    transform: rotate(45deg) scale(2);
+}
+ 
+.popup__close .top,
+.popup__close .bot {
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-iteration-count: 1;
+}
+ 
+.popup__close .top {
+    height: 100%;
+    width: 1px;
+    margin-left: -1px;
+    transform: skewY(45deg);
+    top: 0;
+}
+ 
+.popup__close .bot {
+    width: 100%;
+    height: 1px;
+    margin-top: -1px;
+    transform: skewX(-45deg);
+    left: 0;
+}
+ 
+@-webkit-keyframes top-out {
+    from {
+        top: 0%;
+        height: 100%;
+    }
+    to {
+        top: 200%;
+        height: 0%;
+    }
+}
+ 
+@keyframes top-out {
+    from {
+        top: 0%;
+        height: 100%;
+    }
+    to {
+        top: 200%;
+        height: 0%;
+    }
+}
+@-webkit-keyframes top-in {
+    from {
+        top: -100%;
+        height: 0%;
+    }
+    to {
+        top: 0%;
+        height: 100%;
+    }
+}
+@keyframes top-in {
+    from {
+        top: -100%;
+        height: 0%;
+    }
+    to {
+        top: 0%;
+        height: 100%;
+    }
+}
+@-webkit-keyframes bot-out {
+    from {
+        left: 0%;
+        width: 100%;
+    }
+    to {
+        left: 200%;
+        width: 0%;
+    }
+}
+@keyframes bot-out {
+    from {
+        left: 0%;
+        width: 100%;
+    }
+    to {
+        left: 200%;
+        width: 0%;
+    }
+}
+@-webkit-keyframes bot-in {
+    from {
+        left: -100%;
+        width: 0%;
+    }
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}
+@keyframes bot-in {
+    from {
+        left: -100%;
+        width: 0%;
+    }
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}
+.popup__close:hover {
+    cursor: pointer;
+}
+.popup__close:hover .top {
+    animation: top-out 0.25s forwards, top-in 0.25s forwards 0.25s;
+}
+.popup__close:hover .bot {
+    animation: bot-out 0.25s forwards 0.1s, bot-in 0.25s forwards 0.35s;
 }
 
 @keyframes neon-4 {
@@ -245,5 +524,15 @@ h1 {
     92.5% {
         color: inherit;
         text-shadow: inherit;
+    }
+}
+
+@media (min-width: 1601px) {
+    .menu {
+        font-family: 'Open Sans';
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 1350px;
+        z-index: 5;
     }
 }
